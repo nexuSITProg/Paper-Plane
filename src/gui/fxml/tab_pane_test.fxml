@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.TabPaneController">
+   <children>
+      <TabPane layoutX="200.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Passengers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Passengers" editable="true" layoutX="212.0" layoutY="97.0" prefHeight="371.2" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="passangerId" prefWidth="31.999999403953552" text="id" />
+                              <TableColumn fx:id="passportSeries" prefWidth="98.39996719360352" text="Passport Series" />
+                              <TableColumn fx:id="passportNumber" prefWidth="121.60005187988281" text="Passport number" />
+                              <TableColumn fx:id="secondName" prefWidth="92.80000305175781" text="Second Name" />
+                              <TableColumn fx:id="firstName" prefWidth="84.79998779296875" text="First Name" />
+                              <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name" />
+                              <TableColumn fx:id="address" prefWidth="75.0" text="Address" />
+                              <TableColumn fx:id="phone" prefWidth="75.0" text="Phone" />
+                              <TableColumn fx:id="raceId" prefWidth="75.0" text="Race id" />
+                           </columns>
+                           <items>
+                              <FXCollections fx:factory="observableArrayList" />
+                           </items>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Paths">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Paths" layoutX="200.0" layoutY="86.0" prefHeight="371.2" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="parentPathId" prefWidth="75.0" text="Path id" />
+                            <TableColumn fx:id="pathNumber" prefWidth="75.0" text="Path Number" />
+                              <TableColumn fx:id="departureAirport" prefWidth="75.0" text="Departure Airport" />
+                              <TableColumn fx:id="destinationAirport" prefWidth="75.0" text="Destination Airport" />
+                              <TableColumn fx:id="ticketPrice" prefWidth="75.0" text="Ticket Price" />
+                              <TableColumn fx:id="flightTime" prefWidth="75.0" text="Flight Time" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Races">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Races" layoutX="200.0" layoutY="86.0" prefHeight="371.2" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="parentRaceId" prefWidth="75.0" text="Race id" />
+                            <TableColumn fx:id="raceNumber" prefWidth="75.0" text="Race Number" />
+                              <TableColumn fx:id="departureDate" prefWidth="75.0" text="Departure Date" />
+                              <TableColumn fx:id="departureTime" prefWidth="75.0" text="Departure Time" />
+                              <TableColumn fx:id="raceStatus" prefWidth="75.0" text="Race Status" />
+                              <TableColumn fx:id="pathId" prefWidth="75.0" text="Path id" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Planes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="Planes" layoutX="200.0" layoutY="86.0" prefHeight="371.2" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="planeId" prefWidth="75.0" text="Plane id" />
+                            <TableColumn fx:id="planeModel" prefWidth="75.0" text="Plane model" />
+                              <TableColumn fx:id="manufactureDate" prefWidth="75.0" text="Manufacture Date" />
+                              <TableColumn fx:id="exploitationTime" prefWidth="75.0" text="Exploitation Time" />
+                              <TableColumn fx:id="readyToFlight" prefWidth="75.0" text="Ready to Flight" />
+                              <TableColumn fx:id="planeRaceId" prefWidth="75.0" text="Race id" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
